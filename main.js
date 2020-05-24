@@ -20,11 +20,11 @@ function calculate()
 
   if(leftRightTotal < 0)
   {
-    sessionStorage.setItem("leftRight","Left-wing")
+    sessionStorage.setItem("leftRight","Left-wing");
   }
   else
   {
-    sessionStorage.setItem("leftRight","Right-wing")
+    sessionStorage.setItem("leftRight","Right-wing");
   }
 
   var ups = document.getElementsByClassName("up");
@@ -47,11 +47,27 @@ function calculate()
 
   if(upDownTotal < 0)
   {
-    sessionStorage.setItem("upDown","Libertarian")
+    sessionStorage.setItem("upDown","Libertarian");
+    if(sessionStorage.getItem("leftRight") === "Left-wing")
+    {
+      sessionStorage.setItem("backgroundColor","green");
+    }
+    else
+    {
+      sessionStorage.setItem("backgroundColor","purple");
+    }
   }
   else
   {
-    sessionStorage.setItem("upDown","Authoritarian")
+    sessionStorage.setItem("upDown","Authoritarian");
+    if(sessionStorage.getItem("leftRight") === "Left-wing")
+    {
+      sessionStorage.setItem("backgroundColor","red");
+    }
+    else
+    {
+      sessionStorage.setItem("backgroundColor","#00adf2");
+    }
   }
 
   window.location.href = "results.html";
@@ -61,4 +77,8 @@ function displayResult()
 {
   var result = document.getElementById("result");
   result.innerHTML = "Your result is: " + sessionStorage.getItem("leftRight") + " " + sessionStorage.getItem("upDown");
+
+  document.body.style.backgroundColor = sessionStorage.getItem("backgroundColor");
+  document.documentElement.style.backgroundColor = sessionStorage.getItem("backgroundColor");
+
 }
