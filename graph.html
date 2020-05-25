@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title> Political Spectrum Quiz </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#00adf2" />
+    <link rel="stylesheet" href="graph.css">
+    <script>
+      function moveShit()
+      {
+        var shift = 388;
+        var authorityNum = (-1 * Number(sessionStorage.getItem("authorityNum"))) + shift;
+        var directionNum = (-1 * Number(sessionStorage.getItem("directionNum")))+ shift;
+
+        var circle = document.getElementById("circle");
+
+        console.log("Current top: " + circle.style.top);
+        console.log("Current left: " + circle.style.left);
+
+        circle.style.top =  authorityNum + "px";
+        circle.style.left = directionNum + "px";
+
+        console.log("New top: " + circle.style.top);
+        console.log("New left: " + circle.style.left);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1> Political Compass Graph </h1>
+    <p> There is a good chance this doesn't work right now. </p.
+    <button onclick="moveShit()"> Load graph </button>
+
+    <div class="container">
+      <img id="chart" class="image" src="graph.png"></img>
+      <img id="circle" class="image" src="dot.png"></img>
+    </div>
+  </body>
+</html>

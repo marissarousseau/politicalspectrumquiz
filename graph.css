@@ -1,0 +1,18 @@
+.image
+{
+  position: absolute;
+}
+
+.container
+{
+  position: relative;
+}
+
+
+#circle
+{
+  z-index: 90000;
+  height: 24px;
+  top: 388px;
+  left: 388px;
+}

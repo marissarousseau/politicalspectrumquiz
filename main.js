@@ -17,6 +17,7 @@ function calculate()
   }
 
   var leftRightTotal = rightTotal + leftTotal;
+  sessionStorage.setItem("directionNum",leftRightTotal);
 
   if(leftRightTotal < 0)
   {
@@ -44,6 +45,7 @@ function calculate()
   }
 
   var upDownTotal = upTotal + downTotal;
+  sessionStorage.setItem("authorityNum",upDownTotal);
 
   if(upDownTotal < 0)
   {
