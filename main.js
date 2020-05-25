@@ -84,3 +84,22 @@ function displayResult()
   document.documentElement.style.backgroundColor = sessionStorage.getItem("backgroundColor");
 
 }
+
+
+function loadGraph()
+{
+  var shift = 388;
+  var authorityNum = (-100 * Number(sessionStorage.getItem("authorityNum"))) + shift;
+  var directionNum =  (100 * Number(sessionStorage.getItem("directionNum")))+ shift;
+
+  var circle = document.getElementById("circle");
+
+  console.log("Current top: " + circle.style.top);
+  console.log("Current left: " + circle.style.left);
+
+  circle.style.top =  authorityNum + "px";
+  circle.style.left = directionNum + "px";
+
+  console.log("New top: " + circle.style.top);
+  console.log("New left: " + circle.style.left);
+}
