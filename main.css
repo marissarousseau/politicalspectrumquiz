@@ -1,10 +1,29 @@
-@import url("https://fontlibrary.org/face/didact-gothic");
+@font-face
+{
+    font-family: 'ElaineSansRegular';
+    src: url('font/elainesans-regular-webfont.woff2') format('woff2'),
+         url('font/elainesans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face
+{
+    font-family: 'Now';
+    src: url('font/now-regular-webfont.woff2') format('woff2'),
+         url('font/now-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
 
 html, body
 {
   background-color: #00adf2;
   text-align: center;
-  font-family: 'DidactGothicMedium', sans-serif;
+  font-family: 'Now';
   height: 100%;
   width: 100vw;
   margin: 0;
@@ -12,7 +31,7 @@ html, body
 
 select, option, button
 {
-  font-family: 'DidactGothicMedium', sans-serif;
+  font-family: 'Now';
   border: 2px solid black;
 }
 
