@@ -18,6 +18,14 @@
     font-display: fallback;
 }
 
+h1, h2, h3
+{
+  font-size: 50px;
+}
+select, option, button, a, p
+{
+  font-size: 25px;
+}
 
 html, body
 {
@@ -50,4 +58,24 @@ article
 {
   margin-left: 100px;
   margin-right: 100px;
+}
+
+header
+{
+  background-color: #0076a6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.main-content
+{
+  margin-top: 225px;
+}
+
+#submit-button
+{
+  margin-bottom: 25px;
 }
